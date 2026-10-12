@@ -1,24 +1,20 @@
-# kana-counter: a Mizuki visitor counter
+# mizuki-counter
 
 A cute visitor counter for GitHub profile READMEs and personal sites. Every digit
 is held up by a pixel-art chibi **Akiyama Mizuki** (暁山瑞希) from *Project SEKAI*,
 each one in a different pose.
 
 <p align="center">
-  <img alt="kana-counter demo" src="https://kana-counter.vercel.app/api/count?demo=1234567&label=1" width="600" />
+  <img alt="all ten poses, holding 0 to 9" src="https://mizuki-counter.vercel.app/api/count?demo=123456789&digits=10&label=1" width="100%" />
 </p>
 
 GitHub プロフィールや個人サイト用のアクセスカウンターです。数字を一桁ずつ、ちびキャラの暁山瑞希が掲げます。
 
 用于 GitHub 主页 README 和个人网站的访客计数器，每一位数字都由一个像素风 Q 版晓山瑞希举着。
 
-## The ten poses
+## Features
 
-<p align="center">
-  <img alt="digits 0 to 4" src="https://kana-counter.vercel.app/api/count?demo=01234" width="420" />
-  <img alt="digits 5 to 9" src="https://kana-counter.vercel.app/api/count?demo=56789" width="420" />
-</p>
-
+- Ten poses, one per digit, so every number looks a little different.
 - At least 5 digits are shown (`00042`); a sixth figure appears when the count reaches 100000, and so on.
 - Light and dark versions, so the counter can follow the viewer's GitHub theme.
 - Optional "Visitors" label on the left.
@@ -26,10 +22,10 @@ GitHub プロフィールや個人サイト用のアクセスカウンターで�
 
 ## Use it
 
-The public instance at `kana-counter.vercel.app` keeps a counter only for its owner, so
+The public instance at `mizuki-counter.vercel.app` keeps a counter only for its owner, so
 **deploy your own copy first** (free, about two minutes):
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FShinoKana%2Fkana-counter&project-name=kana-counter&repository-name=kana-counter&stores=%5B%7B%22type%22%3A%22integration%22%2C%22integrationSlug%22%3A%22upstash%22%2C%22productSlug%22%3A%22upstash-kv%22%7D%5D)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FShinoKana%2Fmizuki-counter&project-name=mizuki-counter&repository-name=mizuki-counter&stores=%5B%7B%22type%22%3A%22integration%22%2C%22integrationSlug%22%3A%22upstash%22%2C%22productSlug%22%3A%22upstash-kv%22%7D%5D)
 
 The button clones this repository and adds a free Upstash Redis database to store the
 counts. Then put this in your README, with your own deployment URL and any name you like:

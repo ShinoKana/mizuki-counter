@@ -2,8 +2,8 @@ import { Redis } from "@upstash/redis";
 import { renderCounter, THEMES } from "../lib/render.js";
 
 // Upstash Redis via the Vercel marketplace (KV_REST_API_*) or Upstash's own
-// variable names. The kana-counter.vercel.app instance shares a free store
-// with other projects, so it only touches keys under "kana-counter:" and
+// variable names. The mizuki-counter.vercel.app instance shares a free store
+// with other projects, so it only touches keys under "mizuki-counter:" and
 // never flushes or scans the database.
 const redis = new Redis({
   url: process.env.UPSTASH_REDIS_REST_URL ?? process.env.KV_REST_API_URL,
@@ -25,7 +25,7 @@ const START = Object.fromEntries(list(process.env.COUNTER_START).map((p) => p.sp
 const lastSeen = new Map(); // shown if the database can't be reached
 
 async function count(name, peek) {
-  const key = `kana-counter:${name}`;
+  const key = `mizuki-counter:${name}`;
   if (peek) return Number((await redis.get(key)) ?? START[name] ?? 0);
   let n = await redis.incr(key);
   if (n === 1 && START[name]) {
