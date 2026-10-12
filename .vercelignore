@@ -1,0 +1,5 @@
+scripts/
+assets/
+docs/
+themes/*/
+*.md

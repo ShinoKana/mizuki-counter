@@ -1,0 +1,8 @@
+{
+  "functions": {
+    "api/count.js": { "includeFiles": "{themes/*.json,lib/*.json}" }
+  },
+  "rewrites": [
+    { "source": "/@:name", "destination": "/api/count?name=:name" }
+  ]
+}
